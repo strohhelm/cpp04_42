@@ -1,0 +1,68 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/28 22:01:15 by pstrohal          #+#    #+#             */
+/*   Updated: 2024/11/29 14:33:09 by pstrohal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../inc/Dog.hpp"
+
+/* ************************************************************************** */
+/*		CONSTRUCTORS, DESTRUCTORS											  */
+/* ************************************************************************** */
+
+//Default constructor
+Dog::Dog() : Animal()
+{
+	std::cout<<O<<"Dog default constructor called!"<<X<<std::endl;
+	_type = "Dog";
+}
+/*----------------------------------------------------------------------------*/
+
+
+// Copy constructor
+Dog::Dog(const Dog& original) : Animal(original)
+{
+	std::cout<<O<<"Dog copy constructor called!"<<X<<std::endl;
+}
+/*----------------------------------------------------------------------------*/
+
+
+// Default destructor
+Dog::~Dog()
+{
+	std::cout	<<O<<"Dog default destructor called!"
+				<<X<<std::endl;
+}
+
+
+/* ************************************************************************** */
+/*		OPERATOR OVERLOADS													  */
+/* ************************************************************************** */
+
+Dog& Dog::operator=(const Dog& original)
+{
+	std::cout<<O<<"Dog Copy assignment operator called!"<<X<<std::endl;
+	if (this != &original)
+	{
+		Animal::operator=(original);
+	}
+	return *this;
+}
+
+
+/* ************************************************************************** */
+/*			MEMBER FUNCTIONS												  */
+/* ************************************************************************** */
+
+void	Dog::makeSound(void) const
+{
+
+	std::cout	<<O<<"Woof Woof WOOOF WOOOF WOFF Wof woff!!"
+				<<X<<std::endl;
+}

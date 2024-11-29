@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:37:21 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 11:49:51 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:33:31 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ class WrongCat	: public WrongAnimal
 			WrongCat(const WrongCat& original);
 			WrongCat& operator=(const WrongCat &original);
 	void	makeSound(void) const;
+	
+	// private:
+	// 	std::string *s;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:36:28 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 21:54:55 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:35:05 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,9 @@ class Animal
 
 		virtual void	makeSound(void) const;
 		std::string		getType(void) const;
-		
+
 	protected:
 		std::string _type;
-
 };
 
 #endif

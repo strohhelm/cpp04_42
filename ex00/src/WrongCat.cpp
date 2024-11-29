@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:47:56 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 11:47:33 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:34:11 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ WrongCat::WrongCat() : WrongAnimal()
 {
 	_type = "WrongCat";
 	std::cout<<LP<<"WrongCat default constructor called!"<<X<<std::endl;
+	// s = new std::string[10];
 }
 /*----------------------------------------------------------------------------*/
 
@@ -40,6 +41,7 @@ WrongCat::~WrongCat()
 {
 	std::cout	<<LP<<"WrongCat default destructor called!"
 				<<X<<std::endl;
+				// delete [] s;
 }
 
 

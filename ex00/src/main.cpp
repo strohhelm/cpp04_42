@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:22:42 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 22:02:51 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:37:48 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ int main (void)
 	pinky.makeSound();
 	std::cout<<std::endl;
 	
+	milli.makeSound();
+	std::cout<<std::endl;
+
 	Dog *hubble = new Dog();
 	hubble->makeSound();
 	delete hubble;
@@ -48,8 +51,6 @@ int main (void)
 	meta->makeSound();
 	std::cout<<std::endl;
 	
-	milli.makeSound();
-	std::cout<<std::endl;
 
 	WrongAnimal wAnimal;
 	WrongAnimal *wc= new WrongCat();
@@ -58,7 +59,7 @@ int main (void)
 	std::cout << "wAnimal is a " <<wAnimal.getType() <<  std::endl;
 	std::cout << "wc is a " <<wc->getType() <<  std::endl;
 	wAnimal.makeSound();
-	wc->makeSound();
+	wc->makeSound(); //will not output the WrongCat sound
 	
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
 

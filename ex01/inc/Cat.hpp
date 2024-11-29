@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:37:21 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 13:06:47 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:00:17 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ class Cat	: public Animal
 			Cat(const Cat& original);
 			Cat& operator=(const Cat &original);
 	void	makeSound(void) const;
+	void	haveIdea(std::string idea);
+	void	think(void);
+
+	private:
+			Brain *_brain;
 };
 
 #endif

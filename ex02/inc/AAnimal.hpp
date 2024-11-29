@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:36:28 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:26:06 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:20:30 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,11 @@ class AAnimal
 		AAnimal& operator=(const AAnimal& original);
 
 		virtual void	makeSound(void) const = 0;
-
 		std::string		getType(void) const;
-		void			haveIdea(std::string idea);
-		void			think(void);
 
 	protected:
 		std::string _type;
-		Brain *_brain;
+
 
 };
 

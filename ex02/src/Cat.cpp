@@ -17,7 +17,7 @@
 /* ************************************************************************** */
 
 //Default constructor
-Cat::Cat() : AAnimal()
+Cat::Cat() : AAnimal(), _brain(new Brain())
 {
 	std::cout<<M<<"Cat default constructor called!"<<X<<std::endl;
 	_type = "Cat";
@@ -26,10 +26,10 @@ Cat::Cat() : AAnimal()
 
 
 // Copy constructor
-Cat::Cat(const Cat& original) : AAnimal(original)
+Cat::Cat(const Cat& original) : AAnimal(), _brain(new Brain(*(original._brain)))
 {
+	_type = original._type;
 	std::cout<<M<<"Cat copy constructor called!"<<X<<std::endl;
-	std::cout<<std::endl;
 }
 /*----------------------------------------------------------------------------*/
 
@@ -37,6 +37,7 @@ Cat::Cat(const Cat& original) : AAnimal(original)
 // Default destructor
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout	<<M<<"Cat default destructor called!"
 				<<X<<std::endl;
 }
@@ -52,6 +53,7 @@ Cat& Cat::operator=(const Cat& original)
 	if (this != &original)
 	{
 		AAnimal::operator=(original);
+		*(this->_brain) = *(original._brain);
 	}
 	return *this;
 }
@@ -66,4 +68,14 @@ void	Cat::makeSound(void) const
 
 	std::cout	<<M<<"Meooooow! Meeeeooww!"
 				<<X<<std::endl;
+}
+
+void	Cat::haveIdea(std::string idea)
+{
+	std::cout<<M<<_type<<"Cat has a new idea!"<<std::endl;
+	_brain->setIdea(idea);
+}
+void	Cat::think(void)
+{
+	_brain->printIdeas();
 }

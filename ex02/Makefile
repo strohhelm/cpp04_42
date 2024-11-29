@@ -11,7 +11,7 @@
 # ************************************************************************** #
 
 
-NAME = AnimalsWithBrains
+NAME = AAnimalsWithBrains
 
 CC = c++
 

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:22:42 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:05:10 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:17:21 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int main (void)
 {
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
 
-	Animal *cat = new Cat;
-	Animal *dog = new Dog;
-	Animal *kitty = new Cat;
-	Animal *doggy = new Dog;
+	Cat *cat = new Cat;
+	Dog *dog = new Dog;
+	Cat *kitty = new Cat;
+	Dog *doggy = new Dog;
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 
 	Animal pip(*cat);
@@ -47,10 +47,10 @@ int main (void)
 	cat->think();
 	std::cout<<P<<"dog is thinking:"<<X<<std::endl;
 	dog->think();
-	std::cout<<"hallo"<<std::endl;
+	std::cout<<P<<"---------------------------"<<X<<std::endl;
 	*kitty = *cat;
 	*doggy = *dog;
-	std::cout<<"hallo"<<std::endl;
+	std::cout<<P<<"---------------------------"<<X<<std::endl;
 	
 	delete cat;
 	delete dog;
@@ -60,8 +60,8 @@ int main (void)
 	kitty->think();
 	std::cout<<P<<"doggy is thinking:"<<X<<std::endl;
 	doggy->think();
-	Animal copycat(*kitty);
-	Animal copydog(*doggy);
+	Cat copycat(*kitty);
+	Dog copydog(*doggy);
 	delete kitty;
 	delete doggy;
 	std::cout<<std::endl;

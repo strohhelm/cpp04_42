@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:36:28 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 14:51:22 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:00:30 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,10 @@ class Animal
 
 		virtual void	makeSound(void) const;
 		std::string		getType(void) const;
-		void			haveIdea(std::string idea);
-		void			think(void);
 
 	protected:
 		std::string _type;
-		Brain *_brain;
+
 
 };
 

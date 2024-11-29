@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:22:42 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 19:52:53 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:24:36 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@ int main (void)
 {
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
 
-	AAnimal *cat = new Cat;
-	AAnimal *dog = new Dog;
-	AAnimal *kitty = new Cat;
-	AAnimal *doggy = new Dog;
+	Cat *cat = new Cat;
+	Dog *dog = new Dog;
+	Cat *kitty = new Cat;
+	Dog *doggy = new Dog;
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
+
+	// AAnimal pip(*cat);
+	
 
 	cat->haveIdea("Oh im so hungry!");
 	cat->haveIdea("Oh im so thirsty!");
@@ -44,10 +47,10 @@ int main (void)
 	cat->think();
 	std::cout<<P<<"dog is thinking:"<<X<<std::endl;
 	dog->think();
-	std::cout<<std::endl;
+	std::cout<<P<<"---------------------------"<<X<<std::endl;
 	*kitty = *cat;
 	*doggy = *dog;
-	std::cout<<std::endl;
+	std::cout<<P<<"---------------------------"<<X<<std::endl;
 	
 	delete cat;
 	delete dog;
@@ -57,39 +60,36 @@ int main (void)
 	kitty->think();
 	std::cout<<P<<"doggy is thinking:"<<X<<std::endl;
 	doggy->think();
-	
-	Cat copycat = Cat(*(Cat *)kitty);
-	Dog copydog = Dog(*(Dog *)doggy);
-	std::cout<<std::endl;
+	Cat copycat(*kitty);
+	Dog copydog(*doggy);
 	delete kitty;
 	delete doggy;
 	std::cout<<std::endl;
-	
 	std::cout<<P<<"copycat is thinking:"<<X<<std::endl;
 	copycat.think();
 	std::cout<<P<<"copydog is thinking:"<<X<<std::endl;
 	copydog.think();
 	std::cout<<std::endl;
 	
-	// AAnimal **horde = new AAnimal*[100];
+	AAnimal **horde = new AAnimal*[100];
 
-	// std::cout<<R<<"\n\n-------------HORDE:----------------------"<<X<<std::endl;
+	std::cout<<R<<"\n\n-------------HORDE:----------------------"<<X<<std::endl;
 
-	// for(int i = 0; i < 100; i++)
-	// {
-	// 	if (i % 2 == 0)
-	// 		horde[i] = new Cat;
-	// 	else
-	// 		horde[i] = new Dog;
-	// 	std::cout<<"\n";
-	// }
-	// std::cout<<R<<"\n\n-------------HORDE DESTRUCT:----------------------"<<X<<std::endl;
-	// for (int i = 0; i < 100; i++)
-	// {
-	// 	delete horde[i];
-	// 	std::cout<<"\n";
-	// }
-	// delete[] horde;
+	for(int i = 0; i < 100; i++)
+	{
+		if (i % 2 == 0)
+			horde[i] = new Cat;
+		else
+			horde[i] = new Dog;
+		std::cout<<"\n";
+	}
+	std::cout<<R<<"\n\n-------------HORDE DESTRUCT:----------------------"<<X<<std::endl;
+	for (int i = 0; i < 100; i++)
+	{
+		delete horde[i];
+		std::cout<<"\n";
+	}
+	delete[] horde;
 	std::cout<<R<<"\n\n-------------GENERAL DESTRUCTORS:----------------------"<<X<<std::endl;
 
 }

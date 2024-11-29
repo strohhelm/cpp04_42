@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:37:29 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 19:49:38 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:24:04 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ class Dog	: public AAnimal
 			Dog(const Dog& original);
 			Dog& operator=(const Dog &original);
 	void	makeSound(void) const;
+	void	haveIdea(std::string idea);
+	void	think(void);
+	
+	private:
+			Brain *_brain;
 };
 
 #endif

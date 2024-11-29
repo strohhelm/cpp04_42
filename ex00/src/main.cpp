@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:22:42 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 12:17:54 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:02:51 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int main (void)
 
 	WrongAnimal wAnimal;
 	WrongAnimal *wc= new WrongCat();
+	WrongCat *lol = new WrongCat();
+	delete lol;
 	std::cout << "wAnimal is a " <<wAnimal.getType() <<  std::endl;
 	std::cout << "wc is a " <<wc->getType() <<  std::endl;
 	wAnimal.makeSound();
@@ -60,8 +62,8 @@ int main (void)
 	
 	std::cout<<R<<"\n\n-------------DESTRUCTORS:----------------------"<<X<<std::endl;
 
+	delete wc;
 	delete meta;
 	delete i;
 	delete j;
-	delete wc;
 }

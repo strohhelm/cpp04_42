@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:22:42 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:33:37 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:52:53 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int main (void)
 {
 	std::cout<<R<<"\n-------------CONSTRUCTORS:----------------------"<<X<<std::endl;
 
-	Animal *cat = new Cat;
-	Animal *dog = new Dog;
-	Animal *kitty = new Cat;
-	Animal *doggy = new Dog;
+	AAnimal *cat = new Cat;
+	AAnimal *dog = new Dog;
+	AAnimal *kitty = new Cat;
+	AAnimal *doggy = new Dog;
 	std::cout<<R<<"\n-------------FUNCTION TESTS:----------------------\n"<<X<<std::endl;
 
 	cat->haveIdea("Oh im so hungry!");
@@ -44,10 +44,10 @@ int main (void)
 	cat->think();
 	std::cout<<P<<"dog is thinking:"<<X<<std::endl;
 	dog->think();
-	std::cout<<"hallo"<<std::endl;
+	std::cout<<std::endl;
 	*kitty = *cat;
 	*doggy = *dog;
-	std::cout<<"hallo"<<std::endl;
+	std::cout<<std::endl;
 	
 	delete cat;
 	delete dog;
@@ -71,7 +71,7 @@ int main (void)
 	copydog.think();
 	std::cout<<std::endl;
 	
-	// Animal **horde = new Animal*[100];
+	// AAnimal **horde = new AAnimal*[100];
 
 	// std::cout<<R<<"\n\n-------------HORDE:----------------------"<<X<<std::endl;
 

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:37:21 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 13:06:47 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:50:09 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@
 #define CAT_HPP
 #include <string>
 #include <iostream>
-#include "./Animal.hpp"
+#include "./AAnimal.hpp"
 
-class Cat	: public Animal
+class Cat	: public AAnimal
 {
 	public:
 			Cat();

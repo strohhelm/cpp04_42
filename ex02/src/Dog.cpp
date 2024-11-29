@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:01:15 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 14:33:09 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:49:25 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /* ************************************************************************** */
 
 //Default constructor
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
 	std::cout<<O<<"Dog default constructor called!"<<X<<std::endl;
 	_type = "Dog";
@@ -26,7 +26,7 @@ Dog::Dog() : Animal()
 
 
 // Copy constructor
-Dog::Dog(const Dog& original) : Animal(original)
+Dog::Dog(const Dog& original) : AAnimal(original)
 {
 	std::cout<<O<<"Dog copy constructor called!"<<X<<std::endl;
 }
@@ -50,7 +50,7 @@ Dog& Dog::operator=(const Dog& original)
 	std::cout<<O<<"Dog Copy assignment operator called!"<<X<<std::endl;
 	if (this != &original)
 	{
-		Animal::operator=(original);
+		AAnimal::operator=(original);
 	}
 	return *this;
 }

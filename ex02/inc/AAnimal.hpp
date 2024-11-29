@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -28,20 +28,20 @@
 #define W	"\033[37m"
 #endif
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <string>
 #include <iostream>
 #include "./Brain.hpp"
 
-class Animal
+class AAnimal
 {
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal& original);
-		Animal& operator=(const Animal& original);
+		AAnimal();
+		virtual ~AAnimal();
+		AAnimal(const AAnimal& original);
+		AAnimal& operator=(const AAnimal& original);
 
 		virtual void	makeSound(void) const = 0;
 

@@ -6,7 +6,7 @@
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:37:29 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 11:49:44 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:49:38 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@
 
 #include <string>
 #include <iostream>
-#include "./Animal.hpp"
+#include "./AAnimal.hpp"
 
-class Dog	: public Animal
+class Dog	: public AAnimal
 {
 	public:
 			Dog();

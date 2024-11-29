@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pstrohal <pstrohal@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:58:26 by pstrohal          #+#    #+#             */
-/*   Updated: 2024/11/29 15:16:01 by pstrohal         ###   ########.fr       */
+/*   Updated: 2024/11/29 19:47:53 by pstrohal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 
 /* ************************************************************************** */
 /*		CONSTRUCTORS, DESTRUCTORS											  */
 /* ************************************************************************** */
 
 //Default constructor
-Animal::Animal() : _type("Animal")
+AAnimal::AAnimal() : _type("AAnimal")
 {
-	std::cout<<Y<<"Animal default constructor called!"<<X<<std::endl;
+	std::cout<<Y<<"AAnimal default constructor called!"<<X<<std::endl;
 	_brain = new Brain;
 }
 /*----------------------------------------------------------------------------*/
 
 // Copy constructor
-Animal::Animal(const Animal& original) : _type(original._type)
+AAnimal::AAnimal(const AAnimal& original) : _type(original._type)
 {
-	std::cout<<Y<<"Animal copy constructor called!"<<X<<std::endl;
+	std::cout<<Y<<"AAnimal copy constructor called!"<<X<<std::endl;
 	_brain = new Brain(*(original._brain));
 }
 /*----------------------------------------------------------------------------*/
 
 
 // Default destructor
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	delete _brain;
-	std::cout	<<Y<<"Animal default destructor called!"
+	std::cout	<<Y<<"AAnimal default destructor called!"
 				<<X<<std::endl;
 }
 
@@ -46,9 +46,9 @@ Animal::~Animal()
 /*		OPERATOR OVERLOADS													  */
 /* ************************************************************************** */
 
-Animal& Animal::operator=(const Animal& original)
+AAnimal& AAnimal::operator=(const AAnimal& original)
 {
-	std::cout<<Y<<"Animal Copy assignment operator called!"<<X<<std::endl;
+	std::cout<<Y<<"AAnimal Copy assignment operator called!"<<X<<std::endl;
 	if (this != &original)
 	{
 		this->_type = original._type;
@@ -61,23 +61,23 @@ Animal& Animal::operator=(const Animal& original)
 /*			MEMBER FUNCTIONS												  */
 /* ************************************************************************** */
 
-void Animal::makeSound(void) const
+void AAnimal::makeSound(void) const
 {
-	std::cout	<<Y<<"<Animals dont make sounds!>"
+	std::cout	<<Y<<"<AAnimals dont make sounds!>"
 				<<X<<std::endl;
 }
 
-std::string	Animal::getType(void) const
+std::string	AAnimal::getType(void) const
 {
 	return(this->_type);
 }
 
-void	Animal::haveIdea(std::string idea)
+void	AAnimal::haveIdea(std::string idea)
 {
 	std::cout<<Y<<_type<<" has a new idea!"<<std::endl;
 	_brain->setIdea(idea);
 }
-void	Animal::think(void)
+void	AAnimal::think(void)
 {
 	_brain->printIdeas();
 }

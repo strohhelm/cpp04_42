@@ -17,7 +17,7 @@
 /* ************************************************************************** */
 
 //Default constructor
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	std::cout<<M<<"Cat default constructor called!"<<X<<std::endl;
 	_type = "Cat";
@@ -26,7 +26,7 @@ Cat::Cat() : Animal()
 
 
 // Copy constructor
-Cat::Cat(const Cat& original) : Animal(original)
+Cat::Cat(const Cat& original) : AAnimal(original)
 {
 	std::cout<<M<<"Cat copy constructor called!"<<X<<std::endl;
 	std::cout<<std::endl;
@@ -51,7 +51,7 @@ Cat& Cat::operator=(const Cat& original)
 	std::cout<<M<<"Cat Copy assignment operator called!"<<X<<std::endl;
 	if (this != &original)
 	{
-		Animal::operator=(original);
+		AAnimal::operator=(original);
 	}
 	return *this;
 }

@@ -28,7 +28,7 @@ vpath %.d $(DEP_DIR)
 
 
 FILES =	main.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		Cat.cpp \
 		Dog.cpp \
 		Brain.cpp
